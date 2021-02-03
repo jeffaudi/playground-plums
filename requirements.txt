@@ -1,0 +1,18 @@
+# Dataflow
+numpy
+appdirs==1.4.3
+ordered-set
+lark-parser==0.8.5
+
+# Model
+schema
+PyYaml
+packaging
+
+# Plot
+Pillow==6.2.2
+colorspacious
+
+# Commons
+geojson
+nox

@@ -1,0 +1,122 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.124424,
+              8.746101
+            ],
+            [
+              75.17824,
+              8.746101
+            ],
+            [
+              75.17824,
+              8.763898
+            ],
+            [
+              75.124424,
+              8.763898
+            ],
+            [
+              75.124424,
+              8.746101
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "status": "LABELLIZED",
+        "zone_id": "d05fae15-219d-4fad-96c3-1d816fdcd8de",
+        "image_id": "c13689423b9f12a2cb351efff123c80b407ef4aa",
+        "dataset_id": "de601205-07c7-4258-b7ad-4c457a592ec7",
+        "type": "zone",
+        "image_2_id": null,
+        "name": "Île-de-France"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.139078,
+              8.754469
+            ],
+            [
+              75.139067,
+              8.754457
+            ],
+            [
+              75.139024,
+              8.754474
+            ],
+            [
+              75.139035,
+              8.754486
+            ],
+            [
+              75.139078,
+              8.754469
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "comment": null,
+        "angle": null,
+        "tags": "car,in parking",
+        "surface": null,
+        "width": null,
+        "length": null,
+        "type": "record"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.145122,
+              8.755133
+            ],
+            [
+              75.145115,
+              8.755121
+            ],
+            [
+              75.145076,
+              8.75513
+            ],
+            [
+              75.145083,
+              8.755142
+            ],
+            [
+              75.145122,
+              8.755133
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "comment": null,
+        "angle": null,
+        "tags": "car",
+        "surface": null,
+        "width": null,
+        "length": null,
+        "type": "record"
+      }
+    }
+  ]
+}

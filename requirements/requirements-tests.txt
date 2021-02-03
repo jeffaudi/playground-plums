@@ -1,0 +1,8 @@
+# Dataflow
+pytest==5.4.1
+pytest-cov==2.8.1
+opencv-contrib-python==4.2.0.32
+lycon==0.2.0
+python-rapidjson==0.9.1
+simplejson==3.17.0
+orjson==2.6.2
