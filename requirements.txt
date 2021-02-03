@@ -10,7 +10,7 @@ PyYaml
 packaging
 
 # Plot
-Pillow==6.2.2
+Pillow==7.0.0
 colorspacious
 
 # Commons
