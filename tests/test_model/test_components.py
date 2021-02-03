@@ -2,12 +2,12 @@
 
 import pytest
 
-from plums.model.exception import PlumsValidationError
+from playground_plums.model.exception import PlumsValidationError
 
-from plums.commons.path import Path
-from plums.model.components.utils import Checkpoint, TrainingStatus
-from plums.model.components.version import Version, version, __version_register__, __version_hook_register__, register
-from plums.model.components.components import Producer, CheckpointCollection, Training
+from playground_plums.commons.path import Path
+from playground_plums.model.components.utils import Checkpoint, TrainingStatus
+from playground_plums.model.components.version import Version, version, __version_register__, __version_hook_register__, register
+from playground_plums.model.components.components import Producer, CheckpointCollection, Training
 
 
 class TestUtils:
@@ -219,7 +219,7 @@ class TestVersion:
         assert not version_instance != 0
 
     def test_py_pa(self):
-        from plums.model.components.version import version
+        from playground_plums.model.components.version import version
 
         version_instance = version('py_pa', '2.0.0')
         assert str(version_instance) == '2.0.0'

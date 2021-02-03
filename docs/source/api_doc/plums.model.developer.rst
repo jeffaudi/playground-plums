@@ -17,14 +17,14 @@ because it should not be used directly by end-users or model producers/consumers
 Producer version handling
 -------------------------
 
-.. automodule:: plums.model.components.version
+.. automodule:: playground_plums.model.components.version
     :members: version, register
     :undoc-members:
     :special-members: __eq__, __lt__, __str__
     :show-inheritance:
     :member-order: bysource
 
-.. automodule:: plums.model.components.version
+.. automodule:: playground_plums.model.components.version
     :members: Version, PyPA
     :undoc-members:
     :special-members: __eq__, __lt__, __str__
@@ -34,13 +34,13 @@ Producer version handling
 Utils
 -----
 
-.. automodule:: plums.model.components.utils
+.. automodule:: playground_plums.model.components.utils
     :members: is_duplicate, copy, rmtree
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. automodule:: plums.model.components.utils
+.. automodule:: playground_plums.model.components.utils
     :members: TrainingStatus
     :undoc-members:
     :show-inheritance:

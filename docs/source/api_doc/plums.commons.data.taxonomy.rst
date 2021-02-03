@@ -17,7 +17,7 @@ It mainly consists in 3 classes:
 
 The Taxonomy API
 ----------------
-.. automodule:: plums.commons
+.. automodule:: playground_plums.commons
     :members: Taxonomy
     :undoc-members:
     :exclude-members: a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z
@@ -25,7 +25,7 @@ The Taxonomy API
     :show-inheritance:
     :member-order: bysource
 
-.. automodule:: plums.commons
+.. automodule:: playground_plums.commons
     :members: Label
     :undoc-members:
     :exclude-members: a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z
@@ -36,7 +36,7 @@ The Taxonomy API
 Trees helper classes
 --------------------
 
-.. automodule:: plums.commons
+.. automodule:: playground_plums.commons
     :members: Tree
     :undoc-members:
     :exclude-members: a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z
@@ -47,7 +47,7 @@ Trees helper classes
 Taxonomies iterators
 ....................
 
-.. automodule:: plums.commons.data.taxonomy.iterator
+.. automodule:: playground_plums.commons.data.taxonomy.iterator
     :members:
     :undoc-members:
     :exclude-members: a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z
@@ -58,7 +58,7 @@ Taxonomies iterators
 Taxonomies accessors
 ....................
 
-.. automodule:: plums.commons.data.taxonomy.accessor
+.. automodule:: playground_plums.commons.data.taxonomy.accessor
     :members:
     :undoc-members:
     :exclude-members: a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z

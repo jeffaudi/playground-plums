@@ -1,2 +1,2 @@
-include plums/dataflow/utils/parser/grammar.lark
-include plums/plot/engine/fonts/*.ttf
+include playground_plums/dataflow/utils/parser/grammar.lark
+include playground_plums/plot/engine/fonts/*.ttf

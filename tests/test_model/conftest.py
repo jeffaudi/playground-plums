@@ -3,7 +3,7 @@ from contextlib import contextmanager
 import pytest
 import yaml
 
-from plums.commons.path import Path
+from playground_plums.commons.path import Path
 
 
 @contextmanager

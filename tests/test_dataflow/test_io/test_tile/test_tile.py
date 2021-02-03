@@ -1,8 +1,8 @@
 import pytest
 import numpy as np
 
-from plums.commons.path import Path
-from plums.dataflow.io.tile import Tile, rgb, rgba, bgr, bgra, y
+from playground_plums.commons.path import Path
+from playground_plums.dataflow.io.tile import Tile, rgb, rgba, bgr, bgra, y
 
 
 @pytest.fixture(params=('ext', 'no_ext'))

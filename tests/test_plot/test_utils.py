@@ -1,6 +1,6 @@
 import pytest
 
-from plums.plot.engine.utils import get_default_font, get_text_color
+from playground_plums.plot.engine.utils import get_default_font, get_text_color
 
 
 def test_get_text_color():

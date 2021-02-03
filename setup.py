@@ -27,12 +27,12 @@ def _load_requirements(path_dir: str, file_name: str = "requirements.txt", comme
     return reqs
 
 
-with io.open('plums/__init__.py', 'rt', encoding='utf8') as f:
+with io.open('playground_plums/__init__.py', 'rt', encoding='utf8') as f:
     version = re.search(r'__version__ = \'(.*?)\'', f.read(), re.M).group(1)
 
 
 setup(
-    name='plums',
+    name='playground-plums',
     version=str(version),
     packages=find_packages(exclude=['tests', 'tests.*', 'docs', 'docs.*']),
     author="Clement Maliet",

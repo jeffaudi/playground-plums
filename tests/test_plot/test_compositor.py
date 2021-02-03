@@ -1,9 +1,9 @@
 import numpy as np
 import pytest
 
-from plums.commons import TileWrapper, DataPoint, RecordCollection, Record, Annotation
-from plums.plot.engine.color import Color
-from plums.plot.engine.compositor import Compositor
+from playground_plums.commons import TileWrapper, DataPoint, RecordCollection, Record, Annotation
+from playground_plums.plot.engine.color import Color
+from playground_plums.plot.engine.compositor import Compositor
 
 
 class TestCompositor:

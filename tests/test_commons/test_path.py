@@ -12,7 +12,7 @@ try:
 except ImportError:
     fspath = str
 
-from plums.commons.path import Path
+from playground_plums.commons.path import Path
 
 
 @pytest.fixture(params=["pathlib", "Path", "str"])

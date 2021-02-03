@@ -12,7 +12,7 @@ objects like |Training|, |Producer|, |CheckpointCollection| and |Checkpoint|.
 .. seealso::
     The :ref:`model_dev` for more information on the |Model| API inner workings.
 
-.. automodule:: plums.model.model
+.. automodule:: playground_plums.model.model
     :members: Model
     :undoc-members:
     :show-inheritance:
@@ -21,20 +21,20 @@ objects like |Training|, |Producer|, |CheckpointCollection| and |Checkpoint|.
 Components
 ----------
 
-.. automodule:: plums.model.model
+.. automodule:: playground_plums.model.model
     :members: initialisation
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. automodule:: plums.model.components.components
+.. automodule:: playground_plums.model.components.components
     :members:
     :special-members: __eq__
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. autoclass:: plums.model.components.utils.Checkpoint
+.. autoclass:: playground_plums.model.components.utils.Checkpoint
     :members:
     :special-members: __eq__, __hash__
     :undoc-members:
@@ -44,7 +44,7 @@ Components
 Exceptions
 ----------
 
-.. automodule:: plums.model.exception
+.. automodule:: playground_plums.model.exception
     :members:
     :undoc-members:
     :show-inheritance:

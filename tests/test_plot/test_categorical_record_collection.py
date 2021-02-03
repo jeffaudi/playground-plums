@@ -1,5 +1,5 @@
-from plums.commons import RecordCollection, Record
-from plums.plot.engine.color_engine import CategoricalRecordCollection
+from playground_plums.commons import RecordCollection, Record
+from playground_plums.plot.engine.color_engine import CategoricalRecordCollection
 
 
 class TestRecord:

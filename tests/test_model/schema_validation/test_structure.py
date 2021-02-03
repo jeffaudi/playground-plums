@@ -3,10 +3,10 @@ import os
 import pytest
 from tests.test_model.conftest import __metadata__, __metadata_empty__
 
-from plums.model.exception import PlumsModelTreeValidationError, PlumsValidationError
-from plums.commons.path import Path
-from plums.model.validation import validate
-from plums.model.validation.utils.dict_from_tree import make_dict_structure_from_tree
+from playground_plums.model.exception import PlumsModelTreeValidationError, PlumsValidationError
+from playground_plums.commons.path import Path
+from playground_plums.model.validation import validate
+from playground_plums.model.validation.utils.dict_from_tree import make_dict_structure_from_tree
 
 
 @pytest.fixture()

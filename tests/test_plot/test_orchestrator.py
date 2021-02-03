@@ -2,9 +2,11 @@ import pytest
 import numpy as np
 import PIL.Image
 
-from plums.commons.data import TileWrapper, RecordCollection, Record
-from plums.plot.engine.descriptor import CategoricalDescriptor, ContinuousDescriptor, IntervalDescriptor, Labels
-from plums.plot.engine.orchestrator import Orchestrator
+from playground_plums.commons.data import TileWrapper, RecordCollection, Record
+from playground_plums.plot.engine.descriptor import (
+    CategoricalDescriptor, ContinuousDescriptor, IntervalDescriptor, Labels
+)
+from playground_plums.plot.engine.orchestrator import Orchestrator
 
 
 __options__ = ('zoom', 'plot_centers', 'plot_confidences', 'title', 'background_color', 'fill',

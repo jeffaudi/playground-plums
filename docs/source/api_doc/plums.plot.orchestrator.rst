@@ -16,13 +16,13 @@ The |Orchestrator| is highly customizable, and different layouts of the mosaic c
   mosaic will correspond to a row of that array (the row being generally of different lengths).
 
 
-.. automodule:: plums.plot.engine
+.. automodule:: playground_plums.plot.engine
     :members: Orchestrator
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. automodule:: plums.plot.engine.orchestrator
+.. automodule:: playground_plums.plot.engine.orchestrator
     :members: OrchestratorBase
     :undoc-members:
     :show-inheritance:

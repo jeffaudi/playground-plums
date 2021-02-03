@@ -18,8 +18,8 @@ which reference a |Taxonomy|:
 .. code-block:: python
 
     import numpy as np
-    from plums.commons.data import DataPoint, Annotation, TileWrapper, RecordCollection, Record
-    from plums.commons.data.taxonomy import Taxonomy, Label
+    from playground_plums.commons.data import DataPoint, Annotation, TileWrapper, RecordCollection, Record
+    from playground_plums.commons.data.taxonomy import Taxonomy, Label
 
     # Make a taxonomy
     breakfast = Label('breakfast item')
@@ -66,7 +66,7 @@ The first step would be to construct a |Taxonomy| using the :ref:`Taxonomy API <
 
 .. code-block:: python
 
-    from plums.commons.data.taxonomy import Taxonomy, Label
+    from playground_plums.commons.data.taxonomy import Taxonomy, Label
 
     breakfast = Label('breakfast item')
     eggs = Label('eggs', parent=breakfast)
@@ -116,7 +116,7 @@ The next step is to create a bunch of |Record| and to store them in a |RecordCol
 
 .. code-block:: python
 
-    from plums.commons.data import RecordCollection, Record
+    from playground_plums.commons.data import RecordCollection, Record
 
     first = Record([[[0, 0], [0, 1], [1, 1], [1, 0], [0, 0]]], ('eggs', ))
     second = Record([[[0, 0], [0, 1], [1, 1], [1, 0], [0, 0]]], ('bacon', ))
@@ -203,7 +203,7 @@ We have to build an |Annotation| from our |RecordCollection|:
 
 .. code-block:: python
 
-    from plums.commons.data import Annotation
+    from playground_plums.commons.data import Annotation
 
     annotation = Annotation(record_collection)
 
@@ -212,7 +212,7 @@ Then we will build a dummy empty |Tile| with numpy and the |TileWrapper| util cl
 .. code-block:: python
 
     import numpy as np
-    from plums.commons.data import TileWrapper
+    from playground_plums.commons.data import TileWrapper
 
     tile = TileWrapper(np.zeros((100, 100, 3)))
 
@@ -220,6 +220,6 @@ A |DataPoint| is a *container class* for a |Tile|, |Annotation| couple, which is
 
 .. code-block:: python
 
-    from plums.commons.data import DataPoint
+    from playground_plums.commons.data import DataPoint
 
     data_point = DataPoint(tile, annotation)

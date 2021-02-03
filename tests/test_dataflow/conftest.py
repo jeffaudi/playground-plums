@@ -4,7 +4,7 @@ import shutil
 import pytest
 from appdirs import user_cache_dir
 
-from plums.commons.path import Path
+from playground_plums.commons.path import Path
 
 _tree_complex = {
     'metadata.csv': '',

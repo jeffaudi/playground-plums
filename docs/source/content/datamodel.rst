@@ -73,9 +73,9 @@ in the *data-model*. This serves both as a summary of the *data-model* and an ex
 +--------------------+-------------------------------------------------------------------+------------------------------------------------------------------+
 | Class              | Interfaces                                                        | Attributes                                                       |
 +====================+===================================================================+==================================================================+
-| |DataPoint|        | :math:`\varnothing`                                               | * :attr:`~plums.commons.DataPoint.tile`                          |
-|                    |                                                                   | * :attr:`~plums.commons.DataPoint.annotation`                    |
-|                    |                                                                   | * :attr:`~plums.commons.DataPoint.properties`                    |
+| |DataPoint|        | :math:`\varnothing`                                               | * :attr:`~playground_plums.commons.DataPoint.tile`               |
+|                    |                                                                   | * :attr:`~playground_plums.commons.DataPoint.annotation`         |
+|                    |                                                                   | * :attr:`~playground_plums.commons.DataPoint.properties`         |
 +--------------------+-------------------------------------------------------------------+------------------------------------------------------------------+
 | |TileCollection|   | * :meth:`~object.__getitem__`                                     |                                                                  |
 |                    | * :meth:`~object.__setitem__`                                     |                                                                  |
@@ -83,39 +83,39 @@ in the *data-model*. This serves both as a summary of the *data-model* and an ex
 |                    | * :meth:`~object.__iter__`                                        |                                                                  |
 |                    | * :meth:`~object.__len__`                                         |                                                                  |
 +--------------------+-------------------------------------------------------------------+------------------------------------------------------------------+
-| |Tile|             | * :data:`__array_interface__`                                     | * :attr:`~plums.commons.TileWrapper.filename`                    |
-|                    |                                                                   | * :attr:`~plums.commons.TileWrapper.size`                        |
-|                    |                                                                   | * :attr:`~plums.commons.TileWrapper.width`                       |
-|                    |                                                                   | * :attr:`~plums.commons.TileWrapper.height`                      |
-|                    |                                                                   | * :attr:`~plums.commons.TileWrapper.info`                        |
+| |Tile|             | * :data:`__array_interface__`                                     | * :attr:`~playground_plums.commons.TileWrapper.filename`         |
+|                    |                                                                   | * :attr:`~playground_plums.commons.TileWrapper.size`             |
+|                    |                                                                   | * :attr:`~playground_plums.commons.TileWrapper.width`            |
+|                    |                                                                   | * :attr:`~playground_plums.commons.TileWrapper.height`           |
+|                    |                                                                   | * :attr:`~playground_plums.commons.TileWrapper.info`             |
 +--------------------+-------------------------------------------------------------------+------------------------------------------------------------------+
-| |Annotation|       | * :data:`__geo_interface__`                                       | * :attr:`~plums.commons.Annotation.record_collection`            |
-|                    |                                                                   | * :attr:`~plums.commons.Annotation.mask_collection`              |
-|                    |                                                                   | * :attr:`~plums.commons.Annotation.properties`                   |
+| |Annotation|       | * :data:`__geo_interface__`                                       | * :attr:`~playground_plums.commons.Annotation.record_collection` |
+|                    |                                                                   | * :attr:`~playground_plums.commons.Annotation.mask_collection`   |
+|                    |                                                                   | * :attr:`~playground_plums.commons.Annotation.properties`        |
 +--------------------+-------------------------------------------------------------------+------------------------------------------------------------------+
-| |RecordCollection| | * :data:`__geo_interface__`                                       | * :attr:`~plums.commons.RecordCollection.id`                     |
-|                    | * :meth:`~plums.commons.RecordCollection.__getitem__`             | * :attr:`~plums.commons.RecordCollection.records`                |
-|                    | * :meth:`~plums.commons.RecordCollection.__setitem__`             |                                                                  |
-|                    | * :meth:`~plums.commons.RecordCollection.__len__`                 |                                                                  |
-|                    | * :meth:`~plums.commons.RecordCollection.append`                  |                                                                  |
-|                    | * :meth:`~plums.commons.RecordCollection.to_geojson`              |                                                                  |
+| |RecordCollection| | * :data:`__geo_interface__`                                       | * :attr:`~playground_plums.commons.RecordCollection.id`          |
+|                    | * :meth:`~playground_plums.commons.RecordCollection.__getitem__`  | * :attr:`~playground_plums.commons.RecordCollection.records`     |
+|                    | * :meth:`~playground_plums.commons.RecordCollection.__setitem__`  |                                                                  |
+|                    | * :meth:`~playground_plums.commons.RecordCollection.__len__`      |                                                                  |
+|                    | * :meth:`~playground_plums.commons.RecordCollection.append`       |                                                                  |
+|                    | * :meth:`~playground_plums.commons.RecordCollection.to_geojson`   |                                                                  |
 +--------------------+-------------------------------------------------------------------+------------------------------------------------------------------+
-| |Record|           | * :data:`__geo_interface__`                                       | * :attr:`~plums.commons.Record.id`                               |
-|                    | * :meth:`~plums.commons.RecordCollection.to_geojson`              | * :attr:`~plums.commons.Record.labels`                           |
-|                    |                                                                   | * :attr:`~plums.commons.Record.confidence`                       |
-|                    |                                                                   | * :attr:`~plums.commons.Record.coordinates`                      |
-|                    |                                                                   | * :attr:`~plums.commons.Record.type`                             |
-|                    |                                                                   | * :attr:`~plums.commons.Record.properties`                       |
+| |Record|           | * :data:`__geo_interface__`                                       | * :attr:`~playground_plums.commons.Record.id`                    |
+|                    | * :meth:`~playground_plums.commons.RecordCollection.to_geojson`   | * :attr:`~playground_plums.commons.Record.labels`                |
+|                    |                                                                   | * :attr:`~playground_plums.commons.Record.confidence`            |
+|                    |                                                                   | * :attr:`~playground_plums.commons.Record.coordinates`           |
+|                    |                                                                   | * :attr:`~playground_plums.commons.Record.type`                  |
+|                    |                                                                   | * :attr:`~playground_plums.commons.Record.properties`            |
 +--------------------+-------------------------------------------------------------------+------------------------------------------------------------------+
-| |MaskCollection|   | * :meth:`~plums.commons.MaskCollection.__getitem__`               | * :attr:`~plums.commons.MaskCollection.masks`                    |
+| |MaskCollection|   | * :meth:`~playground_plums.commons.MaskCollection.__getitem__`    | * :attr:`~playground_plums.commons.MaskCollection.masks`         |
 +--------------------+-------------------------------------------------------------------+------------------------------------------------------------------+
-| |VectorMask|       | * :data:`__geo_interface__`                                       | * :attr:`~plums.commons.VectorMask.name`                         |
-|                    | * :meth:`~plums.commons.VectorMask.to_geojson`                    | * :attr:`~plums.commons.VectorMask.coordinates`                  |
-|                    |                                                                   | * :attr:`~plums.commons.VectorMask.properties`                   |
+| |VectorMask|       | * :data:`__geo_interface__`                                       | * :attr:`~playground_plums.commons.VectorMask.name`              |
+|                    | * :meth:`~playground_plums.commons.VectorMask.to_geojson`         | * :attr:`~playground_plums.commons.VectorMask.coordinates`       |
+|                    |                                                                   | * :attr:`~playground_plums.commons.VectorMask.properties`        |
 +--------------------+-------------------------------------------------------------------+------------------------------------------------------------------+
-| |RasterMask|       | * :data:`__array_interface__`                                     | * :attr:`~plums.commons.RasterMask.name`                         |
-|                    |                                                                   | * :attr:`~plums.commons.RasterMask.size`                         |
-|                    |                                                                   | * :attr:`~plums.commons.RasterMask.width`                        |
-|                    |                                                                   | * :attr:`~plums.commons.RasterMask.height`                       |
-|                    |                                                                   | * :attr:`~plums.commons.RasterMask.properties`                   |
+| |RasterMask|       | * :data:`__array_interface__`                                     | * :attr:`~playground_plums.commons.RasterMask.name`              |
+|                    |                                                                   | * :attr:`~playground_plums.commons.RasterMask.size`              |
+|                    |                                                                   | * :attr:`~playground_plums.commons.RasterMask.width`             |
+|                    |                                                                   | * :attr:`~playground_plums.commons.RasterMask.height`            |
+|                    |                                                                   | * :attr:`~playground_plums.commons.RasterMask.properties`        |
 +--------------------+-------------------------------------------------------------------+------------------------------------------------------------------+

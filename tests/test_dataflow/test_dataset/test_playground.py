@@ -1,11 +1,11 @@
 import pytest
 import numpy as np
 
-from plums.commons.path import Path
-from plums.commons.data import Taxonomy, Label, TileCollection
-from plums.dataflow.io import dump, RGB, BGR, Tile
-from plums.dataflow.io.tile._backend import Image
-from plums.dataflow.dataset.playground import PlaygroundDataset, TaxonomyReader, TileDriver, AnnotationDriver
+from playground_plums.commons.path import Path
+from playground_plums.commons.data import Taxonomy, Label, TileCollection
+from playground_plums.dataflow.io import dump, RGB, BGR, Tile
+from playground_plums.dataflow.io.tile._backend import Image
+from playground_plums.dataflow.dataset.playground import PlaygroundDataset, TaxonomyReader, TileDriver, AnnotationDriver
 
 
 @pytest.fixture()

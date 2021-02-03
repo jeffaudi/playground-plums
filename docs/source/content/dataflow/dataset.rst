@@ -119,7 +119,7 @@ We can then create our dataset by instantiating a |PatternDataset| with the *pat
 
 .. code-block:: python
 
-    from plums.dataflow.dataset import PatternDataset
+    from playground_plums.dataflow.dataset import PatternDataset
     dataset = \
         PatternDataset(tile_pattern='datasets/{dataset_id}/samples/{zone_id}/{image_id}/{sample_id}.jpg',
                        annotation_pattern='datasets/{dataset_id}/labels/{zone_id}/{sample_id}.jpg',
@@ -154,7 +154,7 @@ dataflow:
 
 .. code-block:: python
 
-    from plums.dataflow.io import Tile
+    from playground_plums.dataflow.io import Tile
 
     def tile_driver(path_tuple, **matches):
         tiles = [Tile(path) for path in path_tuple]
@@ -166,7 +166,7 @@ data-model. For tiles, it must be an :class:`~collections.OrderedDict`-like enti
 .. code-block:: python
 
     from plus.commons.data import TileCollection
-    from plums.dataflow.io import Tile
+    from playground_plums.dataflow.io import Tile
 
     def tile_driver(path_tuple, **matches):
         tiles = [Tile(path) for path in path_tuple]
@@ -184,8 +184,8 @@ We will discard the zone footprint mask in this example to keep it simple but we
 
 .. code-block:: python
 
-    from plums.commons.data import Annotation, RecordCollection, Record
-    from plums.dataflow.io import load
+    from playground_plums.commons.data import Annotation, RecordCollection, Record
+    from playground_plums.dataflow.io import load
 
     def annotation_driver(path_tuple, **matches):
         path = path_tuple[0]  # We expected a single annotation JSON file
@@ -218,9 +218,9 @@ seen before together:
 
 .. code-block:: python
 
-    from plums.commons.data import Annotation, RecordCollection, Record, TileCollection
-    from plums.dataflow.io import Tile, load
-    from plums.dataflow.dataset import PatternDataset
+    from playground_plums.commons.data import Annotation, RecordCollection, Record, TileCollection
+    from playground_plums.dataflow.io import Tile, load
+    from playground_plums.dataflow.dataset import PatternDataset
 
     def tile_driver_fn(path_tuple, **matches):
         tiles = [Tile(path) for path in path_tuple]

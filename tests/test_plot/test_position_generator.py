@@ -1,7 +1,11 @@
 import pytest
 
-from plums.plot.engine.position_generator import SimpleImagePositionGenerator, LayoutImagePositionGenerator, \
-    AdaptiveImagePositionGenerator, LegendItemPositionGenerator
+from playground_plums.plot.engine.position_generator import (
+    SimpleImagePositionGenerator,
+    LayoutImagePositionGenerator,
+    AdaptiveImagePositionGenerator,
+    LegendItemPositionGenerator
+)
 
 
 class TestSimpleImagePositionGenerator:

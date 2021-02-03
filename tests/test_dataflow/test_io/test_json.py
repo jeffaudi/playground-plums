@@ -9,7 +9,7 @@ except ImportError:
 
 import pytest
 
-from plums.commons.path import Path
+from playground_plums.commons.path import Path
 
 
 @pytest.fixture(scope="module", params=('large', 'small'))
@@ -40,7 +40,7 @@ class TestImport:
     @pytest.fixture(autouse=True)
     def clean_up(self):
         # Ugly cleanup
-        for module in [module for module in sys.modules if 'plums.dataflow.io.json' in module]:
+        for module in [module for module in sys.modules if 'playground_plums.dataflow.io.json' in module]:
             try:
                 del sys.modules[module]
             except KeyError:
@@ -62,31 +62,31 @@ class TestImport:
 
     def test_orjson_fail(self):
         with disable_import('orjson'):
-            import plums.dataflow.io.json
-            assert not plums.dataflow.io.json._HAS_ORJSON
-            assert plums.dataflow.io.json._HAS_RAPIDJSON
-            assert plums.dataflow.io.json._HAS_SIMPLEJSON
+            import playground_plums.dataflow.io.json
+            assert not playground_plums.dataflow.io.json._HAS_ORJSON
+            assert playground_plums.dataflow.io.json._HAS_RAPIDJSON
+            assert playground_plums.dataflow.io.json._HAS_SIMPLEJSON
 
     def test_rapidjson_fail(self):
         with disable_import('rapidjson'):
-            import plums.dataflow.io.json
-            assert plums.dataflow.io.json._HAS_ORJSON
-            assert not plums.dataflow.io.json._HAS_RAPIDJSON
-            assert plums.dataflow.io.json._HAS_SIMPLEJSON
+            import playground_plums.dataflow.io.json
+            assert playground_plums.dataflow.io.json._HAS_ORJSON
+            assert not playground_plums.dataflow.io.json._HAS_RAPIDJSON
+            assert playground_plums.dataflow.io.json._HAS_SIMPLEJSON
 
     def test_simplejson_fail(self):
         with disable_import('simplejson'):
-            import plums.dataflow.io.json
-            assert plums.dataflow.io.json._HAS_ORJSON
-            assert plums.dataflow.io.json._HAS_RAPIDJSON
-            assert not plums.dataflow.io.json._HAS_SIMPLEJSON
+            import playground_plums.dataflow.io.json
+            assert playground_plums.dataflow.io.json._HAS_ORJSON
+            assert playground_plums.dataflow.io.json._HAS_RAPIDJSON
+            assert not playground_plums.dataflow.io.json._HAS_SIMPLEJSON
 
 
 class TestIO:
     @pytest.fixture(autouse=True)
     def clean_up(self):
         # Ugly cleanup
-        for module in [module for module in sys.modules if 'plums.dataflow.io.json' in module]:
+        for module in [module for module in sys.modules if 'playground_plums.dataflow.io.json' in module]:
             try:
                 del sys.modules[module]
             except KeyError:
@@ -113,7 +113,7 @@ class TestIO:
                                                   ('orjson', 'simplejson')), ids=lambda backends: ', '.join(backends))
     def test_load(self, disabled_backend, json_file, data):
         with disable_import(*disabled_backend):
-            from plums.dataflow.io.json import load
+            from playground_plums.dataflow.io.json import load
             test_data = load(json_file)
 
         assert data == test_data
@@ -125,7 +125,7 @@ class TestIO:
                                                   ('orjson', 'simplejson')), ids=lambda backends: ', '.join(backends))
     def test_save(self, disabled_backend, json_file, data, tmp_path):
         with disable_import(*disabled_backend):
-            from plums.dataflow.io.json import load, dump
+            from playground_plums.dataflow.io.json import load, dump
             dump(data, str(tmp_path / 'test.json'))
             test_data = load(str(tmp_path / 'test.json'))
 

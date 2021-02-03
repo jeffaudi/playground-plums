@@ -17,13 +17,13 @@ Moreover, you can decorate your final composition by adding a title on top of it
 
 The actual **compositor** API is exposed here.
 
-.. automodule:: plums.plot.engine.compositor
+.. automodule:: playground_plums.plot.engine.compositor
     :members: CompositorBase
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. automodule:: plums.plot.engine
+.. automodule:: playground_plums.plot.engine
     :members: Compositor
     :undoc-members:
     :show-inheritance:

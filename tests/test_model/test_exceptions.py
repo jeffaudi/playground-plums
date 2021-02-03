@@ -2,7 +2,7 @@ import pytest
 from schema import SchemaError, SchemaForbiddenKeyError, SchemaMissingKeyError, \
     SchemaOnlyOneAllowedError, SchemaUnexpectedTypeError, SchemaWrongKeyError
 
-from plums.model.exception import PlumsError, PlumsValidationError, PlumsModelError, \
+from playground_plums.model.exception import PlumsError, PlumsValidationError, PlumsModelError, \
     PlumsModelMetadataValidationError, PlumsModelTreeValidationError
 
 

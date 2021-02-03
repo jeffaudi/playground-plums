@@ -1,6 +1,6 @@
 import pytest
 
-from plums.dataflow.utils.parser import Parser, ComponentResolver, GroupResolver, ExtensionResolver, \
+from playground_plums.dataflow.utils.parser import Parser, ComponentResolver, GroupResolver, ExtensionResolver, \
     PatternSyntaxError, InvalidGroupConstructSyntaxError, MissingGroupRegexSyntaxError, MissingGroupNameSyntaxError, \
     MissingGroupOpeningSyntaxError, MissingGroupClosingSyntaxError, FileMissingSyntaxError, \
     DuplicateSeparatorSyntaxError, InvalidNameSyntaxError, InvalidExtensionSyntaxError, DuplicateGroupError, \

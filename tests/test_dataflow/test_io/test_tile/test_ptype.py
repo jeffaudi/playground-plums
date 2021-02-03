@@ -1,8 +1,8 @@
 import pytest
 import numpy as np
 
-from plums.dataflow.io.tile._format.channels import Channel, channels_register, Red, Green, Blue, Grey, Alpha
-from plums.dataflow.io.tile._format import ptype, rgb, rgba, bgr, bgra, y
+from playground_plums.dataflow.io.tile._format.channels import Channel, channels_register, Red, Green, Blue, Grey, Alpha
+from playground_plums.dataflow.io.tile._format import ptype, rgb, rgba, bgr, bgra, y
 
 
 def make_channel(value):

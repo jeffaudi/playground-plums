@@ -8,7 +8,7 @@ Descriptor API
 The *Descriptor API* is one of the main component of the Plums *plot* user interface.
 
 A |Descriptor| is a component which *describes* a set of |Record| by adding special *attributes*
-(actually :attr:`~plums.commons.record.Record.properties`) which, when coupled with the |Descriptor| *schema*,
+(actually :attr:`~playground_plums.commons.record.Record.properties`) which, when coupled with the |Descriptor| *schema*,
 allows external components to get personalized data on a |Record| in a unified manner and without any prior on the
 |Record| content.
 
@@ -17,11 +17,11 @@ allows external components to get personalized data on a |Record| in a unified m
 
 A |Descriptor| is made of 3 parts:
 
-* An :meth:`~plums.plot.descriptor.Descriptor.update` method which updates internal values given a collection
+* An :meth:`~playground_plums.plot.descriptor.Descriptor.update` method which updates internal values given a collection
   of |RecordCollection|.
-* A :meth:`~plums.plot.descriptor.Descriptor.compute` method which writes special *description* properties on
+* A :meth:`~playground_plums.plot.descriptor.Descriptor.compute` method which writes special *description* properties on
   |Record| in a collection of |RecordCollection| according to the previously accumulated internal values.
-* A :meth:`~plums.plot.descriptor.Descriptor.__descriptor__` attribute which exposes pointers on how to
+* A :meth:`~playground_plums.plot.descriptor.Descriptor.__descriptor__` attribute which exposes pointers on how to
   decode the written out *description* properties.
 
 There are 2 types of descriptor:
@@ -46,7 +46,7 @@ Let us consider the following |RecordCollection| to be plot:
 
 .. code-block:: python
 
-    from plums.commons.data import RecordCollection, Record
+    from playground_plums.commons.data import RecordCollection, Record
 
     # Create records
     records = [
@@ -87,7 +87,7 @@ Let us consider the following |RecordCollection| to be plot:
 
 The built-in collection of |Descriptor| already allows to select the *main color* according to each |Record|'s
 |Area|, |Labels| or |Confidence|, but what if we wanted to select the *main color* according to the first
-:attr:`~plums.commons.record.Record.labels` *first letter* ?
+:attr:`~playground_plums.commons.record.Record.labels` *first letter* ?
 
 The solution is to create a new *tailor-made* descriptor to handle the task and pass the result to the |ColorEngine| to
 use.
@@ -101,7 +101,7 @@ of machinery already laid out.
 
 .. code-block:: python
 
-    from plums.plot.descriptor import Descriptor
+    from playground_plums.plot.descriptor import Descriptor
 
     class Letter(Descriptor):
         def __init__(self):
@@ -170,7 +170,7 @@ Let's break it down:
             self._max = -0.5
             super(Letter, self).__init__(name='letter')
 
-* We then need to override the :meth:`~plums.plot.descriptor.Descriptor.update` method which will update these
+* We then need to override the :meth:`~playground_plums.plot.descriptor.Descriptor.update` method which will update these
   internal attributes according to the letters encountered in each |RecordCollection|:
 
   .. code-block:: python
@@ -188,7 +188,7 @@ Let's break it down:
                     self._letters.append(letter)
                     self._indices.append(self._max)
 
-* Following from there, we also override the :meth:`~plums.plot.descriptor.Descriptor.compute` method which does
+* Following from there, we also override the :meth:`~playground_plums.plot.descriptor.Descriptor.compute` method which does
   the inverse mapping and adds an index according to the letters found in each |RecordCollection|:
 
   .. code-block:: python
@@ -208,7 +208,7 @@ Let's break it down:
             return record_collections
 
 * Last but not least, we construct the corresponding
-  :attr:`~plums.plot.descriptor.Descriptor.__descriptor__` with the
+  :attr:`~playground_plums.plot.descriptor.Descriptor.__descriptor__` with the
   :meth:`_make_interface` private method:
 
   .. code-block:: python

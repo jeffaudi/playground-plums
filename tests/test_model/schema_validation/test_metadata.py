@@ -3,7 +3,7 @@ from contextlib import contextmanager
 
 import pytest
 
-from plums.model.exception import PlumsModelMetadataValidationError
+from playground_plums.model.exception import PlumsModelMetadataValidationError
 
 
 @contextmanager
@@ -736,7 +736,7 @@ def metadata(format_low_param, model):
 
 
 def test_metadata(metadata):
-    from plums.model.validation.metadata import Metadata as Schema
+    from playground_plums.model.validation.metadata import Metadata as Schema
 
     schema = Schema(verbose=False)
 
@@ -754,7 +754,7 @@ def test_metadata(metadata):
 
 
 def test_initialisation(initialisation):
-    from plums.model.validation.metadata import Initialisation as Schema
+    from playground_plums.model.validation.metadata import Initialisation as Schema
 
     schema = Schema(verbose=False)
 
@@ -772,7 +772,7 @@ def test_initialisation(initialisation):
 
 
 def test_training(training):
-    from plums.model.validation.metadata import Training as Schema
+    from playground_plums.model.validation.metadata import Training as Schema
 
     schema = Schema(verbose=False)
 
@@ -790,7 +790,7 @@ def test_training(training):
 
 
 def test_format(format):
-    from plums.model.validation.metadata import Format as Schema
+    from playground_plums.model.validation.metadata import Format as Schema
 
     schema = Schema(verbose=False)
 

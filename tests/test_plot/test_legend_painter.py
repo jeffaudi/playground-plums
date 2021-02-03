@@ -1,8 +1,8 @@
 import numpy as np
 import PIL.Image
 
-from plums.plot.engine.legend_painter import LegendPainter, LegendItemDrawer
-from plums.plot.engine.color import Color, LightnessColorMap
+from playground_plums.plot.engine.legend_painter import LegendPainter, LegendItemDrawer
+from playground_plums.plot.engine.color import Color, LightnessColorMap
 
 
 class TestLegendItemDrawer:

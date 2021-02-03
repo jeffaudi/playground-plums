@@ -5,10 +5,10 @@ import PIL.ImageDraw
 import numpy as np
 
 
-from plums.commons import TileWrapper, DataPoint, RecordCollection, Record, Annotation, Label
-from plums.plot.engine.painter import Geometry, Draw, TagPainter, Position, Painter
-from plums.plot.engine.descriptor import Confidence
-from plums.plot.engine.color import Color
+from playground_plums.commons import TileWrapper, DataPoint, RecordCollection, Record, Annotation, Label
+from playground_plums.plot.engine.painter import Geometry, Draw, TagPainter, Position, Painter
+from playground_plums.plot.engine.descriptor import Confidence
+from playground_plums.plot.engine.color import Color
 
 
 class TestGeometry:

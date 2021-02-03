@@ -1,18 +1,11 @@
-# Dataflow
 numpy
 appdirs==1.4.3
 ordered-set
 lark-parser==0.8.5
-
-# Model
 schema
 PyYaml
 packaging
-
-# Plot
 Pillow==7.0.0
 colorspacious
-
-# Commons
 geojson
 nox

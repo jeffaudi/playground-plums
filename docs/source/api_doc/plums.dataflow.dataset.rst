@@ -12,14 +12,14 @@ Base datasets
 The main class to stream through data in Plums is the |Dataset| base class, which guarantee a sequence-like
 interface to manipulate data in an ordered fashion.
 
-.. autoclass:: plums.dataflow.dataset.Dataset
+.. autoclass:: playground_plums.dataflow.dataset.Dataset
     :members:
     :special-members: __getitem__
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. autoclass:: plums.dataflow.dataset.SizedDataset
+.. autoclass:: playground_plums.dataflow.dataset.SizedDataset
     :members:
     :special-members: __getitem__, __add__, __len__
     :undoc-members:
@@ -28,14 +28,14 @@ interface to manipulate data in an ordered fashion.
 
 Two utility |Dataset| classes are also provided to ease the creation of dataset partitions and compositions:
 
-.. autoclass:: plums.dataflow.dataset.Subset
+.. autoclass:: playground_plums.dataflow.dataset.Subset
     :members:
     :special-members: __getitem__, __len__
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. autoclass:: plums.dataflow.dataset.ConcatDataset
+.. autoclass:: playground_plums.dataflow.dataset.ConcatDataset
     :members:
     :special-members: __getitem__, __len__
     :undoc-members:
@@ -45,7 +45,7 @@ Two utility |Dataset| classes are also provided to ease the creation of dataset 
 Pattern dataset
 ---------------
 
-.. autoclass:: plums.dataflow.dataset.PatternDataset
+.. autoclass:: playground_plums.dataflow.dataset.PatternDataset
     :members:
     :special-members: __getitem__, __len__
     :undoc-members:
@@ -60,28 +60,28 @@ The following datasets are domain-specific datasets based on the |PatternDataset
 Playground
 ++++++++++
 
-.. autoclass:: plums.dataflow.dataset.PlaygroundDataset
+.. autoclass:: playground_plums.dataflow.dataset.PlaygroundDataset
     :members:
     :special-members: __getitem__, __len__
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. autoclass:: plums.dataflow.dataset.playground.TileDriver
+.. autoclass:: playground_plums.dataflow.dataset.playground.TileDriver
     :members:
     :special-members: __call__
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. autoclass:: plums.dataflow.dataset.playground.AnnotationDriver
+.. autoclass:: playground_plums.dataflow.dataset.playground.AnnotationDriver
     :members:
     :special-members: __call__
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. autoclass:: plums.dataflow.dataset.playground.TaxonomyReader
+.. autoclass:: playground_plums.dataflow.dataset.playground.TaxonomyReader
     :members:
     :special-members: __call__
     :undoc-members:
