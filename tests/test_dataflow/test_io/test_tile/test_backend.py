@@ -64,32 +64,32 @@ def psnr(reference_image, test_image):
 
 
 class TestImport:
-    # @pytest.fixture(autouse=True)
-    # def clean_up(self):
-    #     # Ugly cleanup
-    #     for module in [module for module in sys.modules if 'plums.dataflow.io.tile._backend' in module]:
-    #         try:
-    #             del sys.modules[module]
-    #         except KeyError:
-    #             pass
-    #     try:
-    #         del sys.modules['PIL']
-    #     except KeyError:
-    #         pass
-    #     try:
-    #         del sys.modules['PIL.Image']
-    #     except KeyError:
-    #         pass
-    #     try:
-    #         del sys.modules['lycon']
-    #     except KeyError:
-    #         pass
-    #     try:
-    #         del sys.modules['cv2']
-    #     except KeyError:
-    #         pass
+    @pytest.fixture(autouse=True)
+    def clean_up(self):
+        # Ugly cleanup
+        for module in [module for module in sys.modules if 'plums.dataflow.io.tile._backend' in module]:
+            try:
+                del sys.modules[module]
+            except KeyError:
+                pass
+        try:
+            del sys.modules['PIL']
+        except KeyError:
+            pass
+        try:
+            del sys.modules['PIL.Image']
+        except KeyError:
+            pass
+        try:
+            del sys.modules['lycon']
+        except KeyError:
+            pass
+        try:
+            del sys.modules['cv2']
+        except KeyError:
+            pass
 
-    #     yield
+        yield
 
     def test_all_fail(self):
         with pytest.raises(ImportError, match='Error importing plums.dataflow.io: '
@@ -132,32 +132,32 @@ class TestImport:
 
 
 class TestLoad:
-    # @pytest.fixture(autouse=True)
-    # def clean_up(self):
-    #     # Ugly cleanup
-    #     for module in [module for module in sys.modules if 'plums.dataflow.io.tile._backend' in module]:
-    #         try:
-    #             del sys.modules[module]
-    #         except KeyError:
-    #             pass
-    #     try:
-    #         del sys.modules['PIL']
-    #     except KeyError:
-    #         pass
-    #     try:
-    #         del sys.modules['PIL.Image']
-    #     except KeyError:
-    #         pass
-    #     try:
-    #         del sys.modules['lycon']
-    #     except KeyError:
-    #         pass
-    #     try:
-    #         del sys.modules['cv2']
-    #     except KeyError:
-    #         pass
+    @pytest.fixture(autouse=True)
+    def clean_up(self):
+        # Ugly cleanup
+        for module in [module for module in sys.modules if 'plums.dataflow.io.tile._backend' in module]:
+            try:
+                del sys.modules[module]
+            except KeyError:
+                pass
+        try:
+            del sys.modules['PIL']
+        except KeyError:
+            pass
+        try:
+            del sys.modules['PIL.Image']
+        except KeyError:
+            pass
+        try:
+            del sys.modules['lycon']
+        except KeyError:
+            pass
+        try:
+            del sys.modules['cv2']
+        except KeyError:
+            pass
 
-    #     yield
+        yield
 
     @pytest.mark.parametrize('disabled_backend', (('none', ), ('plums.dataflow.io.tile._vendor.turbojpeg', ),
                                                   ('plums.dataflow.io.tile._vendor.turbojpeg', 'lycon'),
@@ -238,32 +238,32 @@ class TestLoad:
 
 
 class TestDump:
-    # @pytest.fixture(autouse=True)
-    # def clean_up(self):
-    #     # Ugly cleanup
-    #     for module in [module for module in sys.modules if 'plums.dataflow.io.tile._backend' in module]:
-    #         try:
-    #             del sys.modules[module]
-    #         except KeyError:
-    #             pass
-    #     try:
-    #         del sys.modules['PIL']
-    #     except KeyError:
-    #         pass
-    #     try:
-    #         del sys.modules['PIL.Image']
-    #     except KeyError:
-    #         pass
-    #     try:
-    #         del sys.modules['lycon']
-    #     except KeyError:
-    #         pass
-    #     try:
-    #         del sys.modules['cv2']
-    #     except KeyError:
-    #         pass
+    @pytest.fixture(autouse=True)
+    def clean_up(self):
+        # Ugly cleanup
+        for module in [module for module in sys.modules if 'plums.dataflow.io.tile._backend' in module]:
+            try:
+                del sys.modules[module]
+            except KeyError:
+                pass
+        try:
+            del sys.modules['PIL']
+        except KeyError:
+            pass
+        try:
+            del sys.modules['PIL.Image']
+        except KeyError:
+            pass
+        try:
+            del sys.modules['lycon']
+        except KeyError:
+            pass
+        try:
+            del sys.modules['cv2']
+        except KeyError:
+            pass
 
-    #     yield
+        yield
 
     @pytest.mark.parametrize('disabled_backend', (('none', ), ('plums.dataflow.io.tile._vendor.turbojpeg', ),
                                                   ('plums.dataflow.io.tile._vendor.turbojpeg', 'lycon'),
@@ -304,32 +304,32 @@ class TestDump:
 
 
 class TestImage:
-    # @pytest.fixture(autouse=True)
-    # def clean_up(self):
-    #     # Ugly cleanup
-    #     for module in [module for module in sys.modules if 'plums.dataflow.io.tile._backend' in module]:
-    #         try:
-    #             del sys.modules[module]
-    #         except KeyError:
-    #             pass
-    #     try:
-    #         del sys.modules['PIL']
-    #     except KeyError:
-    #         pass
-    #     try:
-    #         del sys.modules['PIL.Image']
-    #     except KeyError:
-    #         pass
-    #     try:
-    #         del sys.modules['lycon']
-    #     except KeyError:
-    #         pass
-    #     try:
-    #         del sys.modules['cv2']
-    #     except KeyError:
-    #         pass
+    @pytest.fixture(autouse=True)
+    def clean_up(self):
+        # Ugly cleanup
+        for module in [module for module in sys.modules if 'plums.dataflow.io.tile._backend' in module]:
+            try:
+                del sys.modules[module]
+            except KeyError:
+                pass
+        try:
+            del sys.modules['PIL']
+        except KeyError:
+            pass
+        try:
+            del sys.modules['PIL.Image']
+        except KeyError:
+            pass
+        try:
+            del sys.modules['lycon']
+        except KeyError:
+            pass
+        try:
+            del sys.modules['cv2']
+        except KeyError:
+            pass
 
-    #     yield
+        yield
 
     @pytest.mark.parametrize('disabled_backend', (('none',), ('plums.dataflow.io.tile._vendor.turbojpeg',),
                                                   ('plums.dataflow.io.tile._vendor.turbojpeg', 'lycon'),
