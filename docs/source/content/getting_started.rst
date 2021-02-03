@@ -17,39 +17,23 @@ What is Plums ?
 ---------------
 
 Plums stands for the **PL**\ ayground **U**\ nified **M**\ icrolib **S**\ et, and it is a set of geo-spatial oriented
-data science *Python* libraries originally built around the *Intelligence Playground* to make the lives of
+data science *Python* packages originally built around the *Intelligence Playground* to make the lives of
 data-scientists easier. But even more so *Plums* aims to be more of an development and team environment, and is built
-as a collection of semi-independent libraries called **microlibs** built on a common data-model.
+as a collection of semi-independent packages built on a common data-model.
 
 
 Installation
 ------------
 
-Each *Plums* libraries are pip-installable from the Playground ML private *PyPI* repository.
+Those packages puropose is to set a unique baseline to help make the code base more unified and avoid countless
+reimplementation of the same tools which in turns make people waste time and make the code base herd to understand,
+debug and reuse.
 
-For example, to install the *Plot* library:
-
-.. code-block:: bash
-
-    pip install --extra-index-url https://playground-ml:****@pypi-dot-theplayground-ml.appspot.com/pypi plums-plot
-
-All libraries depend on the *Plums* base library which in turn only depends on **pure python** libraries (and is thus
-safe to embed in light weight container images for example).
-
-To install every microlibs in on-go, the base *Plums* package offers the convenient `all` extra keyword, as well as a
-keyword every library.
-
-For example to install the base and the *plot* and *dataflow* libraries, one may use:
+Installation is simple with *PyPI* repository:
 
 .. code-block:: bash
-
-    pip install --extra-index-url https://playground-ml:****@pypi-dot-theplayground-ml.appspot.com/pypi plum[plot, dataflow]
-
-And to install everything:
-
-.. code-block:: bash
-
-    pip install --extra-index-url https://playground-ml:****@pypi-dot-theplayground-ml.appspot.com/pypi plum[all]
+    
+    pip install playground-plums
 
 What's next ?
 -------------

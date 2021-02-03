@@ -5,15 +5,8 @@
 
 **PL**\ ayground **U**\ nified **M**\ icrolib **S**\ et : The **Playground ML** python *toolbox* package
 
-.. image:: https://plums-dot-theplayground-ml.appspot.com/badges/python.svg
+.. image:: https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-informational
     :alt: pyversion
-
-.. image:: https://plums-dot-theplayground-ml.appspot.com/badges/pydoc.svg
-    :alt: pydoc
-
-.. image:: https://plums-dot-theplayground-ml.appspot.com/badges/pystable.svg
-    :alt: stable
-
 
 The |PLumsTiny| library set aims to define a common set of library to be used by people involved in the PlaygroundML
 team.
