@@ -51,8 +51,8 @@ class Tile(PropertyContainer, CommonsTile):
         self.filename = filename
         self.totype(ptype=ptype, dtype=dtype)
 
-    @property  # noqa: F811
-    def ptype(self):
+    @property
+    def ptype(self):  # noqa: F811
         """|ptype|: The image pixel-type.
 
         In a similar fashion as data-type, the pixel-type encodes the way a particular pixel vector can be interpreted
