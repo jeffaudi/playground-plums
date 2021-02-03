@@ -38,7 +38,7 @@ setup(
     author="Clement Maliet",
     author_email="clement.maliet@magellium.fr",
     description="Playground ML Unified Microlib Set: The Playground ML python toolbox package",
-    license="TBD",
+    license="MIT",
     include_package_data=True,
     zip_safe=False,
     classifiers=[
