@@ -4,9 +4,9 @@ import numpy as np
 import PIL.Image
 import pytest
 
-from playground_plums.commons import TileWrapper, RecordCollection, Record, Path
-from playground_plums.plot.engine.descriptor import CategoricalDescriptor, Labels
-from playground_plums.plot.plot import StandardPlot, PairPlot
+from plums.commons import TileWrapper, RecordCollection, Record, Path
+from plums.plot.engine.descriptor import CategoricalDescriptor, Labels
+from plums.plot.plot import StandardPlot, PairPlot
 
 
 __options__ = ('zoom', 'plot_centers', 'plot_confidences', 'title', 'background_color', 'fill',

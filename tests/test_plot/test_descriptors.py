@@ -6,13 +6,13 @@ import pytest
 import numpy as np
 from schema import SchemaError
 
-from playground_plums.plot.engine.color import Color, CategoricalColorMap
-from playground_plums.commons import RecordCollection, Record
-from playground_plums.plot.engine.descriptor import (
+from plums.plot.engine.color import Color, CategoricalColorMap
+from plums.commons import RecordCollection, Record
+from plums.plot.engine.descriptor import (
     CategoricalDescriptor, ContinuousDescriptor, IntervalDescriptor, Descriptor,
     Labels, Confidence, Area, IntervalArea, IntervalConfidence, _area
 )
-from playground_plums.plot.engine.color_engine import ColorEngine, ByCategoryDescriptor
+from plums.plot.engine.color_engine import ColorEngine, ByCategoryDescriptor
 
 
 class Type(object):

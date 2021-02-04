@@ -1,7 +1,7 @@
 import pytest
 import numpy as np
 
-from playground_plums.plot.engine.color import ContinuousColorMap, DiscreteColorMap, KeyPointsColorMap, \
+from plums.plot.engine.color import ContinuousColorMap, DiscreteColorMap, KeyPointsColorMap, \
     CircularColorMap, LightnessColorMap, Color, SemiCircularColorMap
 
 

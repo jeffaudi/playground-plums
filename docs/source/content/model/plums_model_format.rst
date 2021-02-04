@@ -80,15 +80,15 @@ It is made of two sections:
   * The *PMF* format ``version``.
   * The *PMF* model |Producer| information *i.e.*:
 
-    * Its :attr:`~playground_plums.model.components.components.Producer.name`
-    * Its :attr:`~playground_plums.model.components.components.Producer.version`
+    * Its :attr:`~plums.model.components.components.Producer.name`
+    * Its :attr:`~plums.model.components.components.Producer.version`
 
 * A |ModelSchema| section which documents the stored *PMF* |Model| contents.
 
 The |ModelSchema| section is itself made of various metadata and two sections:
 
-* The model :attr:`~playground_plums.model.model.Model.name`.
-* The model :attr:`~playground_plums.model.model.Model.id`.
+* The model :attr:`~plums.model.model.Model.name`.
+* The model :attr:`~plums.model.model.Model.id`.
 * A |TrainingSchema| section which documents metadata on the model |Training| *i.e.*:
 
   * The training *status* (*i.e.* pending, running, failed or finished).
@@ -100,8 +100,8 @@ The |ModelSchema| section is itself made of various metadata and two sections:
 * A |InitialisationSchema| section which document the model |initialisation|.
 
 The |CheckpointSchema| section is a mapping between a |Checkpoint| reference
-(its :attr:`~playground_plums.model.components.utils.Checkpoint.name`) and its
-:attr:`~playground_plums.model.components.utils.Checkpoint.epoch` and :attr:`~playground_plums.model.components.utils.Checkpoint.path`. That
+(its :attr:`~plums.model.components.utils.Checkpoint.name`) and its
+:attr:`~plums.model.components.utils.Checkpoint.epoch` and :attr:`~plums.model.components.utils.Checkpoint.path`. That
 is to say that each |Checkpoint| will be registered in the **metadata** as:
 
 .. code-block:: yaml

@@ -1,7 +1,7 @@
 import pytest
 import numpy as np
 
-from playground_plums.dataflow.dataset import Dataset, SizedDataset, Subset, ConcatDataset
+from plums.dataflow.dataset import Dataset, SizedDataset, Subset, ConcatDataset
 
 
 class ConcreteDataset(Dataset):

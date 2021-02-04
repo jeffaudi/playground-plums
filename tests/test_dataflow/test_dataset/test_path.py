@@ -1,7 +1,7 @@
 import pytest
 
-from playground_plums.commons.path import Path
-from playground_plums.dataflow.utils.path import PathResolver
+from plums.commons.path import Path
+from plums.dataflow.utils.path import PathResolver
 
 
 def test_resolver_init():

@@ -3,10 +3,10 @@ import string
 
 import pytest
 
-from playground_plums.commons.path import Path
-from playground_plums.model import Producer, CheckpointCollection, Training
-from playground_plums.model.components.utils import is_duplicate, copy, rmtree, Checkpoint, md5_checksum
-from playground_plums.model.model import Model, initialisation
+from plums.commons.path import Path
+from plums.model import Producer, CheckpointCollection, Training
+from plums.model.components.utils import is_duplicate, copy, rmtree, Checkpoint, md5_checksum
+from plums.model.model import Model, initialisation
 
 __char_index = -1
 

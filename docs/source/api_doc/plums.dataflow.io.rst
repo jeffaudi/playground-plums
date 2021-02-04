@@ -18,13 +18,13 @@ As of now, the list of explicitly supported |ptype| is: |RGB|, |BGR|, |RGBA|, |B
 
 Additional |ptype| may be created on the fly as long as they references existing channels.
 
-.. autoclass:: playground_plums.dataflow.io.Tile
+.. autoclass:: plums.dataflow.io.Tile
     :members:
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. autoclass:: playground_plums.dataflow.io.ptype
+.. autoclass:: plums.dataflow.io.ptype
     :members:
     :special-members: __eq__, __contains__
     :undoc-members:
@@ -44,7 +44,7 @@ The use ordering is expected to reflect loading speed however, because the relat
 dependent on data, it is recommended to benchmark all library for specific use-cases to select the best possible
 backend.
 
-.. automodule:: playground_plums.dataflow.io.json
+.. automodule:: plums.dataflow.io.json
     :members:
     :undoc-members:
     :show-inheritance:

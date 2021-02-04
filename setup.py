@@ -27,22 +27,33 @@ def _load_requirements(path_dir: str, file_name: str = "requirements.txt", comme
     return reqs
 
 
-with io.open('playground_plums/__init__.py', 'rt', encoding='utf8') as f:
+with io.open('plums/__init__.py', 'rt', encoding='utf8') as f:
     version = re.search(r'__version__ = \'(.*?)\'', f.read(), re.M).group(1)
 
 
 setup(
-    name='playground-plums',
+    name='plums',
     version=str(version),
     packages=find_packages(exclude=['tests', 'tests.*', 'docs', 'docs.*']),
-    author="Clement Maliet",
-    author_email="clement.maliet@magellium.fr",
+    author="Airbus DS GEO",
+    author_email="jeffaudi.airbus@gmail.com",
     description="Playground ML Unified Microlib Set: The Playground ML python toolbox package",
+    long_description=open("README.md", "r").read(),
+    long_description_content_type="text/markdown",
     license="MIT",
     include_package_data=True,
     zip_safe=False,
+    python_requires=">=3.6",    
     classifiers=[
-        'Private :: Do Not Upload to pypi server',
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
     ],
     install_requires=_load_requirements(path_dir=os.path.join(PATH_ROOT), file_name="requirements.txt"),
     extras_require={

@@ -6,7 +6,7 @@
 Most **P**\ lums **M**\ odel **F**\ ormat validation is performed with the |validate| function, which take in a |Path|
 and returns the validated model *metadata* or raises a :exc:`PlumsValidationError`.
 
-.. automodule:: playground_plums.model.validation
+.. automodule:: plums.model.validation
     :members:
     :undoc-members:
     :show-inheritance:
@@ -30,7 +30,7 @@ PMF data tree validation API
 
 You may find here the list of |TreeComponent| compositing the :ref:`structure` schema.
 
-.. automodule:: playground_plums.model.validation.structure
+.. automodule:: plums.model.validation.structure
     :members:
     :undoc-members:
     :exclude-members: TreeComponent, DefaultTree
@@ -42,7 +42,7 @@ Metadata validation API
 
 You may find here the list of |MetadataComponent| compositing the :ref:`metadata` schema.
 
-.. automodule:: playground_plums.model.validation.metadata
+.. automodule:: plums.model.validation.metadata
     :members:
     :undoc-members:
     :exclude-members: MetadataComponent, DefaultMetadata
@@ -52,20 +52,20 @@ You may find here the list of |MetadataComponent| compositing the :ref:`metadata
 Core validation API
 .......................
 
-.. automodule:: playground_plums.model.validation.schema_core
+.. automodule:: plums.model.validation.schema_core
     :members:
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. automodule:: playground_plums.model.validation.metadata
+.. automodule:: plums.model.validation.metadata
     :members: MetadataComponent, DefaultMetadata
     :undoc-members:
     :exclude-members:
     :show-inheritance:
     :member-order: bysource
 
-.. automodule:: playground_plums.model.validation.structure
+.. automodule:: plums.model.validation.structure
     :members: TreeComponent, DefaultTree
     :undoc-members:
     :exclude-members:
@@ -75,19 +75,19 @@ Core validation API
 Helper functions
 ................
 
-.. automodule:: playground_plums.model.validation.utils.dict_from_tree
+.. automodule:: plums.model.validation.utils.dict_from_tree
     :members:
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. automodule:: playground_plums.model.validation.utils.checksum
+.. automodule:: plums.model.validation.utils.checksum
     :members:
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. automodule:: playground_plums.model.validation.utils.validate_path
+.. automodule:: plums.model.validation.utils.validate_path
     :members:
     :undoc-members:
     :show-inheritance:

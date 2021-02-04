@@ -5,7 +5,7 @@
 import pytest
 from tests.test_commons.base import mixin_suite
 
-from playground_plums.commons.data.taxonomy import Label, Tree, Taxonomy
+from plums.commons.data.taxonomy import Label, Tree, Taxonomy
 
 
 @pytest.fixture()

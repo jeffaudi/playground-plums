@@ -18,7 +18,7 @@ optionally confidence).
 
 The actual legend API is exposed here.
 
-.. automodule:: playground_plums.plot.engine.legend_painter
+.. automodule:: plums.plot.engine.legend_painter
     :members:
     :undoc-members:
     :show-inheritance:

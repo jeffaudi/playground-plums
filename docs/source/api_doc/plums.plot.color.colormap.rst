@@ -13,13 +13,13 @@ The way colors are handled in Plums **plot** depends on the high-level
 `Colorspacious <https://colorspacious.readthedocs.io/en/latest/index.html>`_ color handling library and the |Color|
 class is a simple container class which delegates all the heavy lifting to *colorspacious*.
 
-It offers a typed handling of colors and introduces the concept of :attr:`~playground_plums.plot.engine.Color.ctype` which
+It offers a typed handling of colors and introduces the concept of :attr:`~plums.plot.engine.Color.ctype` which
 represents a color space in which a |Color| instances live, and thus indicates how its
-:attr:`~playground_plums.plot.engine.Color.components` should be interpreted.
+:attr:`~plums.plot.engine.Color.components` should be interpreted.
 
 Internally, the actual |Color| components are stored in the limited but highly common ``sRGB255`` space.
 
-.. autoclass:: playground_plums.plot.engine.Color(*components, ctype='sRGB255')
+.. autoclass:: plums.plot.engine.Color(*components, ctype='sRGB255')
     :members:
     :special-members: __eq__, __add__, __mul__, __sub__, __array_interface__
     :undoc-members:
@@ -35,7 +35,7 @@ A |ColorMap| performs a link between a set :math:`\mathcal{V} \subset \mathbb{R}
 Note that both sets might be infinite, in which case we construct a |ContinuousColorMap|, or finite, in which case we
 construct a |DiscreteColorMap|.
 
-.. autoclass:: playground_plums.plot.engine.ColorMap
+.. autoclass:: plums.plot.engine.ColorMap
     :members: _get_color, get_color, __call__
     :special-members: __call__
     :undoc-members:
@@ -46,7 +46,7 @@ Constructor classes
 ...................
 
 
-.. automodule:: playground_plums.plot.engine
+.. automodule:: plums.plot.engine
     :members: ContinuousColorMap, DiscreteColorMap
     :undoc-members:
     :show-inheritance:
@@ -55,7 +55,7 @@ Constructor classes
 Concrete color maps classes
 ...........................
 
-.. automodule:: playground_plums.plot.engine
+.. automodule:: plums.plot.engine
     :members: CircularColorMap, SemiCircularColorMap, LightnessColorMap, KeyPointsColorMap, CategoricalColorMap
     :undoc-members:
     :show-inheritance:

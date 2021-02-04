@@ -5,9 +5,9 @@ import pytest
 import numpy as np
 from tests.test_commons.base import mixin_suite
 
-import playground_plums.commons.data as data
-import playground_plums.commons.data.mixin
-from playground_plums.commons.data.taxonomy import Label, Taxonomy
+import plums.commons.data as data
+import plums.commons.data.mixin
+from plums.commons.data.taxonomy import Label, Taxonomy
 
 
 @pytest.fixture(params=('ordered-dict', 'tile-collection'))
@@ -68,11 +68,11 @@ class TestBase:
 
     def test_property_container(self):
         # Check construction
-        p = playground_plums.commons.data.mixin.PropertyContainer()
+        p = plums.commons.data.mixin.PropertyContainer()
         mixin_suite(p)  # Base validity tests
 
     def test_id_mixin(self):
-        id_ = playground_plums.commons.data.mixin.IdentifiedMixIn()
+        id_ = plums.commons.data.mixin.IdentifiedMixIn()
         mixin_suite(id_)  # Base validity tests
 
 
