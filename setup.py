@@ -38,6 +38,8 @@ setup(
     author="Airbus DS GEO",
     author_email="jeffaudi.airbus@gmail.com",
     description="Playground ML Unified Microlib Set: The Playground ML python toolbox package",
+    long_description=open("README.md", "r").read(),
+    long_description_content_type="text/markdown",
     license="MIT",
     include_package_data=True,
     zip_safe=False,
