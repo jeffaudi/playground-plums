@@ -1,0 +1,272 @@
+# -*- coding: utf-8 -*-
+#
+# Configuration file for the Sphinx documentation builder.
+#
+# This file does only contain a selection of the most common options. For a
+# full list see the documentation:
+# http://www.sphinx-doc.org/en/stable/config
+
+# -- Path setup --------------------------------------------------------------
+
+# If extensions (or modules to document with autodoc) are in another directory,
+# add these directories to sys.path here. If the directory is relative to the
+# documentation root, use os.path.abspath to make it absolute, like shown here.
+#
+import os
+import io
+import re
+import sys
+
+from recommonmark.transform import AutoStructify
+
+from sphinx.locale import _
+from sphinx.ext.napoleon.docstring import GoogleDocstring
+
+sys.path.insert(0, os.path.abspath('../..'))
+
+# -- Project information -----------------------------------------------------
+
+project = 'Plums'
+copyright = '2020, Airbus DS Geo'
+author = 'Clement Maliet'
+
+with io.open(os.path.join(os.path.dirname(__file__), '../../plums/__init__.py'), 'rt', encoding='utf8') as f:
+    version_ = re.search(r'__version__ = \'(.*?)\'', f.read(), re.M).group(1)
+
+# The short X.Y version
+version = str(version_)
+# The full version, including alpha/beta/rc tags
+# release = str(version_)
+
+# -- General configuration ---------------------------------------------------
+
+# If your documentation needs a minimal Sphinx version, state it here.
+#
+# needs_sphinx = '2.0.1'
+
+# Add any Sphinx extension module names here, as strings. They can be
+# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
+# ones.
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.coverage',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.napoleon'
+]
+
+# Napoleon settings
+napoleon_google_docstring = True
+napoleon_numpy_docstring = True
+napoleon_include_init_with_doc = False
+napoleon_include_private_with_doc = False
+napoleon_include_special_with_doc = False
+napoleon_use_admonition_for_examples = False
+napoleon_use_admonition_for_notes = False
+napoleon_use_admonition_for_references = False
+napoleon_use_ivar = False
+napoleon_use_param = True
+napoleon_use_rtype = True
+napoleon_use_keyword = True
+napoleon_custom_sections = None
+
+# Add Keys section to Google docstring
+# first, we define new methods for any new sections and add them to the class
+def parse_keys_section(self, section):
+    fields = self._consume_fields()
+    return self._format_fields(_('Interface keys'), fields)
+
+
+GoogleDocstring._parse_keys_section = parse_keys_section
+
+
+# Add Schema section to Google docstring
+# first, we define new methods for any new sections and add them to the class
+def parse_schema_section(self, section):
+    fields = self._consume_fields()
+    return self._format_fields(_('Schema'), fields)
+
+
+GoogleDocstring._parse_schema_section = parse_schema_section
+
+
+# we now patch the parse method to guarantee that the the above methods are
+# assigned to the _section dict
+def patched_parse(self):
+    self._sections['schema'] = self._parse_schema_section
+    self._sections['keys'] = self._parse_keys_section
+    self._unpatched_parse()
+
+
+GoogleDocstring._unpatched_parse = GoogleDocstring._parse
+GoogleDocstring._parse = patched_parse
+
+# Example configuration for intersphinx: refer to the Python standard library.
+intersphinx_mapping = {
+    'python': ('https://docs.python.org/', None),
+    'numpy': ('https://docs.scipy.org/doc/numpy/', None),
+    'Pillow': ('https://pillow.readthedocs.io/en/stable/', None),
+}
+
+# 'releases' (changelog) settings
+# releases_issue_uri = \
+#     "https://code.webfactory.intelligence-airbusds.com/innovation/machine-learning/toolbox/plums/issues/%s"
+# releases_release_uri = \
+#     "https://code.webfactory.intelligence-airbusds.com/innovation/machine-learning/toolbox/plums/tags/%s"
+
+# releases_document_name = ['changelog',
+#                         #   'microlibs/plot-changelog',
+#                         #   'microlibs/plot-source/changelog',
+#                         #   'microlibs/model-changelog',
+#                         #   'microlibs/model-source/changelog',
+#                         #   'microlibs/dataflow-changelog',
+#                         #   'microlibs/dataflow-source/changelog',
+#                           ]
+
+# Add any paths that contain templates here, relative to this directory.
+templates_path = ['_templates']
+
+# The suffix(es) of source filenames.
+# You can specify multiple suffix as a list of string:
+#
+source_suffix = ['.rst', '.md']
+# source_suffix = '.md'
+
+source_parsers = {
+   '.md': 'recommonmark.parser.CommonMarkParser',
+}
+
+
+def setup(app):
+    app.add_config_value('recommonmark_config', {
+        'enable_math': True,
+        'enable_inline_math': True,
+        'enable_eval_rst': True
+            }, True)
+    app.add_transform(AutoStructify)
+
+
+# The master toctree document.
+master_doc = 'index'
+
+# The language for content autogenerated by Sphinx. Refer to documentation
+# for a list of supported languages.
+#
+# This is also used if you do content translation via gettext catalogs.
+# Usually you set "language" from the command line for these cases.
+language = None
+
+# List of patterns, relative to source directory, that match files and
+# directories to ignore when looking for source files.
+# This pattern also affects html_static_path and html_extra_path .
+exclude_patterns = []
+
+# The name of the Pygments (syntax highlighting) style to use.
+pygments_style = 'sphinx'
+
+
+# -- Options for HTML output -------------------------------------------------
+
+# The theme to use for HTML and HTML Help pages.  See the documentation for
+# a list of builtin themes.
+#
+html_theme = 'sphinx_rtd_theme'
+# html4_writer = True
+
+# Theme options are theme-specific and customize the look and feel of a theme
+# further.  For a list of options available for each theme, see the
+# documentation.
+#
+html_theme_options = {
+    'display_version': True,
+    'logo_only': True,
+}
+
+html_logo = '_static/plums_dark.png'
+
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
+# so a file named "default.css" will overwrite the builtin "default.css".
+html_static_path = ['_static']
+
+# Custom sidebar templates, must be a dictionary that maps document names
+# to template names.
+#
+# The default sidebars (for documents that don't match any pattern) are
+# defined by theme itself.  Builtin themes are using these templates by
+# default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
+# 'searchbox.html']``.
+#
+# html_sidebars = {}
+
+# -- Options for autodoc & autosummary extension -----------------------------
+autodoc_default_options = {
+    'members': True,
+    'methods': True,
+    'undoc-members': True,
+    'special-members': '__call__',
+    'exclude-members': '_abc_impl',
+    'show-inheritance': True,
+}
+
+# -- Options for HTMLHelp output ---------------------------------------------
+
+# Output file base name for HTML help builder.
+htmlhelp_basename = 'Plums'
+
+
+# -- Options for LaTeX output ------------------------------------------------
+
+latex_elements = {
+    # The paper size ('letterpaper' or 'a4paper').
+    #
+    # 'papersize': 'letterpaper',
+
+    # The font size ('10pt', '11pt' or '12pt').
+    #
+    # 'pointsize': '10pt',
+
+    # Additional stuff for the LaTeX preamble.
+    #
+    # 'preamble': '',
+
+    # Latex figure (float) alignment
+    #
+    # 'figure_align': 'htbp',
+}
+
+# Grouping the document tree into LaTeX files. List of tuples
+# (source start file, target name, title,
+#  author, documentclass [howto, manual, or own class]).
+latex_documents = [
+    (master_doc, 'Plums.tex', 'Plums API Documentation',
+     'Clement Maliet', 'manual'),
+]
+
+
+# -- Options for manual page output ------------------------------------------
+
+# One entry per manual page. List of tuples
+# (source start file, name, description, authors, manual section).
+man_pages = [
+    (master_doc, 'plums', 'PLums API Documentation',
+     [author], 1)
+]
+
+
+# -- Options for Texinfo output ----------------------------------------------
+
+# Grouping the document tree into Texinfo files. List of tuples
+# (source start file, target name, title, author,
+#  dir menu entry, description, category)
+texinfo_documents = [
+    (master_doc, 'Plums', 'Plums API Documentation',
+     author, 'Plums', 'One line description of project.',
+     'Miscellaneous'),
+]
+
+# -- Extension configuration -------------------------------------------------
+import re
+
+scv_whitelist_branches = ('master', re.compile(r'^[0-9]+-x-x$'))

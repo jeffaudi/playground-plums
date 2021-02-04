@@ -1,0 +1,11 @@
+numpy
+appdirs==1.4.3
+ordered-set
+lark-parser==0.8.5
+schema
+PyYaml
+packaging
+Pillow==7.0.0
+colorspacious
+geojson
+nox
