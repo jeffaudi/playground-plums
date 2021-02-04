@@ -20,13 +20,13 @@ used by end-users. It indicates which interfaces and attributes one should expec
 one *porcelain interface* behaviour may significantly differ from another, one should read each class documentation
 individually rather than relying on the |Plot| to assume subclasses behaviour.
 
-.. automodule:: playground_plums.plot
+.. automodule:: plums.plot
     :members: Plot
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. automodule:: playground_plums.plot
+.. automodule:: plums.plot
     :members: StandardPlot, PairPlot
     :undoc-members:
     :show-inheritance:

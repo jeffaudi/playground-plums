@@ -1,7 +1,7 @@
 import pytest
 import numpy as np
 
-from playground_plums.plot.engine.color.color import Color
+from plums.plot.engine.color.color import Color
 
 
 tol = 1e-3

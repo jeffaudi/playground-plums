@@ -16,24 +16,24 @@ In this QuickStart, we will use the following image:
 
 *Plums* plot uses two components to create figures, the |StandardPlot| or the |PairPlot| interfaces
 (which all behave in a similar fashion: one accumulates |DataPoint|-like elements with
-:meth:`~playground_plums.plot.plot.Plot.add` and aggregates them into a single figure with
-:meth:`~playground_plums.plot.plot.Plot.plot`), and the :ref:`descriptor`.
+:meth:`~plums.plot.plot.Plot.add` and aggregates them into a single figure with
+:meth:`~plums.plot.plot.Plot.plot`), and the :ref:`descriptor`.
 
 Each *Plot* class has slight differences:
 
 * |StandardPlot| takes a |Tile| and a single |RecordCollection| for each
-  :meth:`~playground_plums.plot.plot.StandardPlot.add` call.
+  :meth:`~plums.plot.plot.StandardPlot.add` call.
 * |PairPlot| takes a |Tile| and a pair of |RecordCollection| (implicitly interpreted as *predictions*
-  and *ground-truths* respectively) for each :meth:`~playground_plums.plot.plot.StandardPlot.add` call.
+  and *ground-truths* respectively) for each :meth:`~plums.plot.plot.StandardPlot.add` call.
 
 
 .. code-block:: python
 
     import numpy as np
     import PIL.Image
-    import playground_plums.commons.data as data
-    from playground_plums.plot.plot import StandardPlot, PairPlot
-    from playground_plums.plot.descriptor import Labels, Confidence
+    import plums.commons.data as data
+    from plums.plot.plot import StandardPlot, PairPlot
+    from plums.plot.descriptor import Labels, Confidence
 
     # Make the prediction record collection
     records = [
@@ -112,7 +112,7 @@ to store them in a |RecordCollection| as predictions or ground truths.
 
 .. code-block:: python
 
-    import playground_plums.commons.data as data
+    import plums.commons.data as data
 
     records = [
         data.Record(
@@ -159,7 +159,7 @@ Then, we need to open and instantiate the |Tile| with the image:
 
     import numpy as np
     import PIL.Image
-    import playground_plums.commons.data as data
+    import plums.commons.data as data
 
     tile = PIL.Image.open('image.png')
 
@@ -173,13 +173,13 @@ The |StandardPlot| will compose a figure by painting each record contained in th
 
 It can use one or two descriptors to classify the objects contained in a |RecordCollection|.
 In this example, we use |Labels| as first descriptor which is used to extract the
-:attr:`~playground_plums.commons.data.record.Record.labels` from
+:attr:`~plums.commons.data.record.Record.labels` from
 each |Record| and the |Confidence| as secondary descriptor which is used to extract their
-:attr:`~playground_plums.commons.data.record.Record.confidence` property.
+:attr:`~plums.commons.data.record.Record.confidence` property.
 
 .. code-block:: python
 
-   from playground_plums.plot.plot import StandardPlot
+   from plums.plot.plot import StandardPlot
 
    plot = StandardPlot(Labels(),
                        secondary_descriptor=Confidence(),
@@ -214,7 +214,7 @@ different tiles.
 
 .. code-block:: python
 
-    from playground_plums.plot.plot import  PairPlot
+    from plums.plot.plot import  PairPlot
 
     plot_pair = PairPlot(secondary_descriptor=Labels(),
                          title='PairPlot',

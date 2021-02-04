@@ -3,8 +3,8 @@ import pathlib
 import pytest
 import numpy as np
 
-from playground_plums.commons.data import TileWrapper, Record, RecordCollection, DataPoint
-from playground_plums.dataflow.dataset import PatternDataset
+from plums.commons.data import TileWrapper, Record, RecordCollection, DataPoint
+from plums.dataflow.dataset import PatternDataset
 
 
 def _dummy_tile_driver(paths, **matches):

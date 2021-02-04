@@ -14,7 +14,7 @@ debug and reuse.
 Installation is simple with *PyPI* repository:
 
 ```bash
-pip install playground-plums
+pip install plums
 ```
 
 [TODO]
@@ -32,7 +32,7 @@ reusable classes and utilities for all other packages.
 To import do:
 
 ```python
-import playground_plums.commons
+import commons
 ```
 
 ### Plot
@@ -44,7 +44,7 @@ results.
 To import do:
 
 ```python
-import playground_plums.plot
+import plot
 ```
 
 ### Model
@@ -57,7 +57,7 @@ producer and consumer codebases.
 To import do:
 
 ```python
-import playground_plums.model
+import model
 ```
 
 ### Dataflow
@@ -68,7 +68,7 @@ handling.
 To import do:
 
 ```python
-import playground_plums.dataflow
+import dataflow
 ```
 
 -------------------------------------------------------------------

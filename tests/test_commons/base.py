@@ -2,7 +2,7 @@ import re
 
 import pytest
 
-from playground_plums.commons.data.mixin import PropertyContainer, IdentifiedMixIn
+from plums.commons.data.mixin import PropertyContainer, IdentifiedMixIn
 
 
 def identified_suite(obj):

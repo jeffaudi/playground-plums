@@ -3,7 +3,7 @@ import os.path as op
 import numpy as np
 import cv2
 
-from playground_plums.dataflow.io.tile._vendor.turbojpeg import TurboJPEG, TJPF, TJSAMP
+from plums.dataflow.io.tile._vendor.turbojpeg import TurboJPEG, TJPF, TJSAMP
 
 
 def phash_compare(img1, img2):

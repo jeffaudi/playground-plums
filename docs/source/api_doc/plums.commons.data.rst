@@ -20,40 +20,40 @@ It consists of 2 categories of classes:
 Container classes
 -----------------
 
-.. autoclass:: playground_plums.commons.data.data.DataPoint
+.. autoclass:: plums.commons.data.data.DataPoint
     :members:
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. autoclass:: playground_plums.commons.data.data.Annotation
+.. autoclass:: plums.commons.data.data.Annotation
     :members:
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
 .. Test
-.. automodule:: playground_plums.commons
+.. automodule:: plums.commons
     :members: DataPoint, Annotation
     :undoc-members:
     :show-inheritance:
     :exclude-members: p, r, o, e, t, i, s
     :member-order: bysource
 
-.. autoclass:: playground_plums.commons.data.tile.TileCollection
+.. autoclass:: plums.commons.data.tile.TileCollection
     :members:
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. autoclass:: playground_plums.commons.data.record.RecordCollection(*records, id=None, taxonomy=None)
+.. autoclass:: plums.commons.data.record.RecordCollection(*records, id=None, taxonomy=None)
     :members:
     :special-members: __getitem__, __setitem__, __len__
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. autoclass:: playground_plums.commons.data.mask.MaskCollection
+.. autoclass:: plums.commons.data.mask.MaskCollection
     :members:
     :special-members: __getitem__
     :undoc-members:
@@ -66,20 +66,20 @@ Type classes
 Tile classes
 ++++++++++++
 
-.. autoclass:: playground_plums.commons.data.tile.Tile
+.. autoclass:: plums.commons.data.tile.Tile
     :members:
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. autoclass:: playground_plums.commons.data.tile.TileWrapper
+.. autoclass:: plums.commons.data.tile.TileWrapper
     :members:
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
 .. Test
-.. automodule:: playground_plums.commons
+.. automodule:: plums.commons
     :members: Tile, TileWrapper
     :undoc-members:
     :show-inheritance:
@@ -89,7 +89,7 @@ Tile classes
 Record classes
 ++++++++++++++
 
-.. autoclass:: playground_plums.commons.data.record.Record
+.. autoclass:: plums.commons.data.record.Record
     :members:
     :undoc-members:
     :show-inheritance:
@@ -98,20 +98,20 @@ Record classes
 Mask classes
 ++++++++++++
 
-.. autoclass:: playground_plums.commons.data.mask.VectorMask
+.. autoclass:: plums.commons.data.mask.VectorMask
     :members:
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. autoclass:: playground_plums.commons.data.mask.RasterMask
+.. autoclass:: plums.commons.data.mask.RasterMask
     :members:
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
 .. Test
-.. automodule:: playground_plums.commons
+.. automodule:: plums.commons
     :members: VectorMask, RasterMask
     :undoc-members:
     :show-inheritance:
@@ -124,32 +124,32 @@ Developper documentation
 Some internal classes used for interface-checking and semantic typing and base classes for the data model
 implementation.
 
-.. autoclass:: playground_plums.commons.data.mixin.PropertyContainer
+.. autoclass:: plums.commons.data.mixin.PropertyContainer
     :members:
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. autoclass:: playground_plums.commons.data.base.ArrayInterfaced
+.. autoclass:: plums.commons.data.base.ArrayInterfaced
     :members:
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. autoclass:: playground_plums.commons.data.base.GeoInterfaced
+.. autoclass:: plums.commons.data.base.GeoInterfaced
     :members:
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
 .. Test
-.. automodule:: playground_plums.commons.data
+.. automodule:: plums.commons.data
     :members: ArrayInterfaced, GeoInterfaced
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. autoclass:: playground_plums.commons.data.Mask(name, id=None, **properties)
+.. autoclass:: plums.commons.data.Mask(name, id=None, **properties)
     :members:
     :undoc-members:
     :show-inheritance:
@@ -159,21 +159,21 @@ Implementation helpers
 ----------------------
 
 .. Test
-.. autoclass:: playground_plums.commons.data.mixin.PropertyContainer
+.. autoclass:: plums.commons.data.mixin.PropertyContainer
     :members:
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
 .. Test
-.. automodule:: playground_plums.commons.data.mixin
+.. automodule:: plums.commons.data.mixin
     :members:
     :exclude-members: PropertyContainer, p, r, o, e, t, i, s, d, c
     :undoc-members:
     :show-inheritance:
     :member-order: bysource
 
-.. autoclass:: playground_plums.commons.data.base._Array
+.. autoclass:: plums.commons.data.base._Array
     :members:
     :undoc-members:
     :show-inheritance:
