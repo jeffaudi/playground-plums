@@ -32,7 +32,7 @@ reusable classes and utilities for all other packages.
 To import do:
 
 ```python
-import commons
+import plums.commons
 ```
 
 ### Plot
@@ -44,7 +44,7 @@ results.
 To import do:
 
 ```python
-import plot
+import plums.plot
 ```
 
 ### Model
@@ -57,7 +57,7 @@ producer and consumer codebases.
 To import do:
 
 ```python
-import model
+import plums.model
 ```
 
 ### Dataflow
@@ -68,7 +68,7 @@ handling.
 To import do:
 
 ```python
-import dataflow
+import plums.dataflow
 ```
 
 -------------------------------------------------------------------

@@ -33,7 +33,7 @@ Installation is simple with *PyPI* repository:
 
 .. code-block:: bash
     
-    pip install playground-plums
+    pip install plums
 
 What's next ?
 -------------
