@@ -1,8 +1,8 @@
-nox
-flake8
-flake8-docstrings
-pep8-naming
-flake8-mutable
-flake8-eradicate
-flake8-comprehensions
-flake8-import-order
+nox==2020.12.31
+flake8==3.8.4
+flake8-docstrings==1.5.0
+pep8-naming==0.11.1
+flake8-mutable==1.2.0
+flake8-eradicate==1.0.0
+flake8-comprehensions==3.3.1
+flake8-import-order==0.18.1
