@@ -5,7 +5,7 @@ lark-parser==0.8.5
 schema
 PyYaml
 packaging
-Pillow==7.0.0
+Pillow
 colorspacious
 geojson
 nox
