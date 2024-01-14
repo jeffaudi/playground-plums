@@ -457,7 +457,7 @@ class Painter(PainterBase):
 
         # Select font
         text_font = get_default_font(text_size=int(self.TITLE_SIZE * self._zoom))
-        text_width, text_height = text_font.getsize(title)
+        _, _, text_width, text_height = text_font.getbbox(title)
         text_color = get_text_color(self.TITLE_BACKGROUND_COLOR)
         text_coordinates = ((width - text_width) / 2., (title_height - text_height) / 2.)
 

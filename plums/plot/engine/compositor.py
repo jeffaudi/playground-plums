@@ -120,7 +120,7 @@ class Compositor(CompositorBase):
 
         # Select font
         text_font = get_default_font(text_size=title_size)
-        text_width, text_height = text_font.getsize(title)
+        _, _, text_width, text_height = text_font.getbbox(title)
         text_color = get_text_color(background_color=background_color)
         text_coordinates = ((mosaic.width - text_width) / 2., (title_height - text_height) / 2.)
 

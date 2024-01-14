@@ -88,7 +88,7 @@ class LegendItemDrawer(object):
 
         # Text parameters (font, dimensions, color, coordinates)
         text_font = get_default_font(text_size=text_size)
-        text_width, text_height = text_font.getsize(name)
+        _, _, text_width, text_height = text_font.getbbox(name)
         text_color = get_text_color(self._background_color)
         text_coordinates = (box_width + separation_distance + margins[0],
                             int((box_height - text_height) / 2) + margins[1])
@@ -134,7 +134,7 @@ class LegendItemDrawer(object):
 
         # Main category parameters
         text_font = get_default_font(text_size=text_size)
-        text_width, text_height = text_font.getsize(category_name)
+        _, _, text_width, text_height = text_font.getbbox(category_name)
         text_color = get_text_color(self._background_color)
         text_coordinates = (self._margins[0], self._margins[1])
         offset_y = int((self.BOX_DIMENSIONS[1] - 2 * text_height) / 2) + self._margins[1]
@@ -200,7 +200,7 @@ class LegendItemDrawer(object):
 
         # Main category parameters
         text_font = get_default_font(text_size=text_size)
-        text_width, text_height = text_font.getsize(descriptor_name)
+        _, _, text_width, text_height = text_font.getbbox(descriptor_name)
         outline_color = get_outline_color(self._background_color)
         text_coordinates = (item_size[0] - text_width - margins[2], margins[1])
 
@@ -251,9 +251,9 @@ class LegendItemDrawer(object):
         text_color = get_text_color(self._background_color)
         text_font = get_default_font(text_size=text_height)
 
-        avg_text_width, _ = text_font.getsize(avg_str)
-        end_text_width, _ = text_font.getsize(end_str)
-        name_text_width, _ = text_font.getsize(str(descriptor_name))
+        _, _, avg_text_width, _ = text_font.getbbox(avg_str)
+        _, _, end_text_width, _ = text_font.getbbox(end_str)
+        _, _, name_text_width, _ = text_font.getbbox(str(descriptor_name))
 
         start_coordinates = (self._margins[0], title_height + box_height + 2 * text_margin + self._margins[1])
         avg_coordinates = (self._margins[0] + int((box_width - avg_text_width) / 2.),
